@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatApp Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="cs/auth.css" />
+</head>
+<body>
+
+<div class="login-container">
+  <h2>ChatApp</h2>
+
+  <input id="email" type="email" placeholder="Email" />
+  <input id="password" type="password" placeholder="Password" />
+
+  <button onclick="login()">Login</button>
+
+  <p id="error"></p>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatApp Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <link rel="stylesheet" href="cs/auth.css" />
+  
+</head>
+<body>
+
+<div class="login-container" id="authContainer">
+  <div class="form-container">
+    <!-- Login Form (Default) -->
+    <div class="login-form active" id="loginForm">
+      <h2>ChatApp Login</h2>
+      
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      
+      <button class="login-btn" onclick="login()">Login</button>
+      
+      <div class="divider">
+        <span>Or continue with</span>
+      </div>
+      
+      <button class="google-btn" onclick="googleLogin()">
+        <span class="google-icon"></span>
+        Sign in with Google
+      </button>
+      
+      <div class="links-container">
+        <a href="#" class="forgot-link" onclick="forgotPassword()">Forgot Password?</a>
+        <a href="#" class="switch-link" onclick="switchToSignup()">Create an account</a>
+      </div>
+    </div>
+    
+    <!-- Signup Form (Hidden by default) -->
+    <div class="signup-form" id="signupForm">
+      <h2>Create Account</h2>
+      
+      <input id="signupName" type="text" placeholder="Full Name" />
+      <input id="signupEmail" type="email" placeholder="Email" />
+      <input id="signupPassword" type="password" placeholder="Password" />
+      <input id="confirmPassword" type="password" placeholder="Confirm Password" />
+      
+      <button class="signup-btn" onclick="signup()">Sign Up</button>
+      
+      <div class="divider">
+        <span>Or sign up with</span>
+      </div>
+      
+      <button class="google-btn" onclick="signInWithGoogle()">
+        <span class="google-icon"></span>
+        Sign up with Google
+      </button>
+      
+      <div class="links-container">
+        <a href="#" class="forgot-link" onclick="forgotPassword()">Forgot Password?</a>
+        <a href="#" class="switch-link" onclick="switchToLogin()">Already have an account?</a>
+      </div>
+    </div>
+  </div>
+  
+  <p id="error"></p>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

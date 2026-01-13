@@ -1,0 +1,168 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ 
+  <link rel="stylesheet" href="cs/chat.css" />
+
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+<div class="chat-app">
+
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>ChatApp</h2>
+      <button id="createGroupBtn" class="create-group-btn">+ New Group</button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search or start new chat" />
+    </div>
+
+    <div class="chat-list"></div>
+  </aside>
+
+  
+  <main class="chat-window">
+
+    
+    <div class="chat-header">
+      <div class="chat-user">
+        <div class="avatar large">?</div>
+        <div>
+          <div class="chat-name">Select a chat</div>
+          <div class="chat-status">---</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-messages"></div>
+
+    
+    <div class="chat-input">
+      <input type="text" placeholder="Type a message" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </main>
+</div>
+
+<div id="groupModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Create Group</h3>
+
+    <input
+      id="groupNameInput"
+      type="text"
+      placeholder="Group name"
+    />
+
+    <div id="groupUsersList" class="user-list"></div>
+
+    <div class="modal-actions">
+      <button id="createGroupConfirm">Create</button>
+      <button id="createGroupCancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+
+<script src="https://unpkg.com/@microsoft/signalr@7.0.14/dist/browser/signalr.min.js"></script>
+
+
+<script src="js/chat.js"></script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="cs/chat.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="chat-app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Chats</h2>
+        <div class="sidebar-actions">
+          <button id="newChatBtn">+ New</button>
+          <button id="newGroupBtn">+ Group</button>
+        </div>
+      </div>
+
+      <div id="chatList" class="chat-list"></div>
+
+      <div id="emptyChats" class="empty-state hidden">
+        <p>No conversations yet</p>
+        <button id="startChatBtn">Start new chat</button>
+      </div>
+    </aside>
+
+    <!-- Chat Window -->
+    <main class="chat-window">
+      <div id="chatHeader" class="chat-header">
+        <span id="chatTitle">Select a chat</span>
+        <span id="chatStatus"></span>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <form id="chatForm" class="chat-input">
+        <input id="messageInput" type="text" placeholder="Type a message" autocomplete="off" />
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+
+
+    </main>
+
+  </div>
+
+  <!-- User List Modal -->
+  <div id="userModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select User</h3>
+      <div id="userList"></div>
+      <button onclick="closeUserModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Group Modal -->
+  <div id="groupModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Create Group</h3>
+      <input id="groupName" placeholder="Group name" />
+      <div id="groupUsers"></div>
+      <button id="createGroupConfirm">Create</button>
+      <button onclick="closeGroupModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="https://unpkg.com/@microsoft/signalr@7.0.14/dist/browser/signalr.min.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+appsettings.Development.json
+.env
+# Build results
+bin/
+obj/
+
+# User secrets
+appsettings.Development.json
+.env
+
+# Visual Studio
+.vs/
+*.user
+*.suo
