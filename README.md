@@ -1,4 +1,4 @@
-��#💬 ChatApp – Real-Time Chat Application
+💬 ChatApp – Real-Time Chat Application
 
 A full-stack real-time chat application built with ASP.NET Core, SignalR, and JavaScript, featuring private chats, group chats, live online status, and instant message delivery.
 
